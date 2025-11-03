@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity, FlatList } from 'react-native'
 
-
 const CategoriesDropDown = ({ categories, onSelectCategory, selectedCategory }) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -12,13 +11,8 @@ const CategoriesDropDown = ({ categories, onSelectCategory, selectedCategory }) 
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity 
-        style={styles.dropdownButton}
-        onPress={() => setIsOpen(!isOpen)}
-      >
-        <Text style={styles.dropdownButtonText}>
-          {selectedCategory || 'Select a category...'}
-        </Text>
+      <TouchableOpacity style={styles.dropdownButton} onPress={() => setIsOpen(!isOpen)}>
+        <Text style={styles.dropdownButtonText}>{selectedCategory || 'Select a category...'}</Text>
         <Text style={styles.arrow}>{isOpen ? '▲' : '▼'}</Text>
       </TouchableOpacity>
 
@@ -29,16 +23,15 @@ const CategoriesDropDown = ({ categories, onSelectCategory, selectedCategory }) 
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <TouchableOpacity
-                style={[
-                  styles.dropdownItem,
-                  selectedCategory === item.name && styles.selectedItem
-                ]}
+                style={[styles.dropdownItem, selectedCategory === item.name && styles.selectedItem]}
                 onPress={() => handleSelectCategory(item.name)}
               >
-                <Text style={[
-                  styles.dropdownItemText,
-                  selectedCategory === item.name && styles.selectedItemText
-                ]}>
+                <Text
+                  style={[
+                    styles.dropdownItemText,
+                    selectedCategory === item.name && styles.selectedItemText,
+                  ]}
+                >
                   {item.name}
                 </Text>
               </TouchableOpacity>
@@ -49,7 +42,6 @@ const CategoriesDropDown = ({ categories, onSelectCategory, selectedCategory }) 
     </View>
   )
 }
-
 
 export default CategoriesDropDown
 

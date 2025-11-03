@@ -1,34 +1,32 @@
-import { Button, Modal, StyleSheet, Text, TextInput, View } from 'react-native';
-import { useState } from 'react';
-import data from '../data/data.json';
-import CategoriesDropDown from './CategoriesDropDown';
+import { Button, Modal, StyleSheet, Text, TextInput, View } from 'react-native'
+import { useState } from 'react'
+import data from '../data/data.json'
+import CategoriesDropDown from './CategoriesDropDown'
 
 export default function AddMovieModal({ visible, onClose, onSubmit }) {
-
-  const categories = data.categories;
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const categories = data.categories
+  const [selectedCategory, setSelectedCategory] = useState(null)
 
   return (
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={visible}
-      onRequestClose={onClose}
-    >
+    <Modal animationType="slide" transparent={true} visible={visible} onRequestClose={onClose}>
       <View style={styles.overlay}>
         <View style={styles.modalContent}>
           <Text style={styles.title}>Add New Movie</Text>
           {/* Form elements would go here */}
           <TextInput placeholder="Title" style={styles.input} />
           <TextInput placeholder="Poster URL" style={styles.input} />
-          <CategoriesDropDown categories={categories} onSelectCategory={setSelectedCategory} selectedCategory={selectedCategory} />
+          <CategoriesDropDown
+            categories={categories}
+            onSelectCategory={setSelectedCategory}
+            selectedCategory={selectedCategory}
+          />
           <View style={styles.buttonContainer}>
             <Button
               title="Submit"
               onPress={() => {
                 // Handle form submission
-                if (onSubmit) onSubmit();
-                onClose();
+                if (onSubmit) onSubmit()
+                onClose()
               }}
             />
             <Button title="Close" onPress={onClose} />
@@ -36,7 +34,7 @@ export default function AddMovieModal({ visible, onClose, onSubmit }) {
         </View>
       </View>
     </Modal>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -68,4 +66,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 20,
   },
-});
+})
