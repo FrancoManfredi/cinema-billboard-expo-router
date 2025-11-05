@@ -7,7 +7,24 @@
       "description": "An elite operative must stop a global terrorist threat before it's too late.",
       "poster": "https://images.unsplash.com/photo-1739891251370-05b62a54697b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBtb3ZpZSUyMHBvc3RlcnxlbnwxfHx8fDE3NjE3MzI1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 142,
-      "rating": 8.2
+      "rating": 8.2,
+      "reviews": [
+        {
+          "username": "ActionFan2024",
+          "review": "Amazing action sequences and a gripping storyline. One of the best action movies this year!",
+          "rating": 9
+        },
+        {
+          "username": "MovieCritic87",
+          "review": "Great cinematography but the plot was a bit predictable. Still worth watching.",
+          "rating": 7
+        },
+        {
+          "username": "JohnDoe",
+          "review": "Kept me on the edge of my seat the entire time. Highly recommended!",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "2",
@@ -16,7 +33,34 @@
       "description": "A crew of astronauts embarks on a journey to discover a new habitable planet.",
       "poster": "https://images.unsplash.com/photo-1687985826611-80b714011d0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZmljdGlvbiUyMHNwYWNlfGVufDF8fHx8MTc2MTc1Nzk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 156,
-      "rating": 9.1
+      "rating": 9.1,
+      "reviews": [
+        {
+          "username": "SciFiGeek",
+          "review": "Masterpiece! The visuals are stunning and the story is thought-provoking.",
+          "rating": 10
+        },
+        {
+          "username": "SpaceEnthusiast",
+          "review": "A beautiful exploration of humanity's future. Highly philosophical.",
+          "rating": 9
+        },
+        {
+          "username": "CinemaLover99",
+          "review": "Slow paced but absolutely worth it. The ending left me speechless.",
+          "rating": 9
+        },
+        {
+          "username": "ReviewKing",
+          "review": "Best sci-fi movie I've seen in years. The attention to detail is incredible.",
+          "rating": 10
+        },
+        {
+          "username": "MovieBuff2025",
+          "review": "A bit too long but the cinematography makes up for it.",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "3",
@@ -25,7 +69,8 @@
       "description": "A family moves into an old mansion, only to discover its dark secrets.",
       "poster": "https://images.unsplash.com/photo-1644259268316-b6b54e8a985f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3Jyb3IlMjBkYXJrJTIwY2luZW1hfGVufDF8fHx8MTc2MTc2Nzk3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 108,
-      "rating": 7.5
+      "rating": 7.5,
+      "reviews": []
     },
     {
       "id": "4",
@@ -34,7 +79,19 @@
       "description": "A struggling comedian gets one last chance to make it big in show business.",
       "poster": "https://images.unsplash.com/photo-1758726942669-92f7e499018c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21lZHklMjB0aGVhdGVyfGVufDF8fHx8MTc2MTc1MzQwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 95,
-      "rating": 7.8
+      "rating": 7.8,
+      "reviews": [
+        {
+          "username": "ComedyFan",
+          "review": "Hilarious from start to finish! Had me laughing the whole time.",
+          "rating": 8
+        },
+        {
+          "username": "FunnyBone123",
+          "review": "Some jokes fell flat but overall a fun watch.",
+          "rating": 7
+        }
+      ]
     },
     {
       "id": "5",
@@ -43,7 +100,29 @@
       "description": "A powerful story about love, loss, and the strength to move forward.",
       "poster": "https://images.unsplash.com/photo-1611889466485-4d8a6d3bd2a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmFtYSUyMGNpbmVtYSUyMGZpbG18ZW58MXx8fHwxNzYxNzEzMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 124,
-      "rating": 8.7
+      "rating": 8.7,
+      "reviews": [
+        {
+          "username": "EmotionalWatcher",
+          "review": "Brought me to tears. Such a powerful and moving story.",
+          "rating": 9
+        },
+        {
+          "username": "DramaQueen",
+          "review": "Incredible performances and a story that stays with you.",
+          "rating": 9
+        },
+        {
+          "username": "FilmCritic2025",
+          "review": "A masterclass in storytelling. The acting is phenomenal.",
+          "rating": 10
+        },
+        {
+          "username": "CinephileSteve",
+          "review": "Beautiful cinematography and a heart-wrenching narrative.",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "6",
@@ -52,7 +131,14 @@
       "description": "Two strangers meet in the city of lights and discover an unexpected connection.",
       "poster": "https://images.unsplash.com/photo-1663868290007-e8df80a5b909?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMG1vdmllfGVufDF8fHx8MTc2MTcyODE3OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 112,
-      "rating": 8.0
+      "rating": 8.0,
+      "reviews": [
+        {
+          "username": "RomanticSoul",
+          "review": "A beautiful love story set in the most romantic city. Absolutely charming!",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "7",
@@ -61,7 +147,24 @@
       "description": "A group of friends embark on a thrilling journey to uncover hidden treasures.",
       "poster": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aHJpbGxlc3xlbnwxfHx8fDE3NjE3MzI1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 130,
-      "rating": 8.5
+      "rating": 8.5,
+      "reviews": [
+        {
+          "username": "AdventureSeeker",
+          "review": "Non-stop action and adventure. A thrill ride from beginning to end!",
+          "rating": 9
+        },
+        {
+          "username": "TreasureHunter",
+          "review": "Fun movie with great chemistry between the cast.",
+          "rating": 8
+        },
+        {
+          "username": "PopcornReviewer",
+          "review": "Perfect popcorn movie. Entertaining and well-paced.",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "8",
@@ -70,7 +173,8 @@
       "description": "Explorers venture into uncharted space to establish a new colony.",
       "poster": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMGNvbG9ueXxlbnwxfHx8fDE3NjE3NTc5NzlfMA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 145,
-      "rating": 9.0
+      "rating": 9.0,
+      "reviews": []
     },
     {
       "id": "9",
@@ -79,7 +183,19 @@
       "description": "A group of friends confronts the malevolent spirits in an abandoned asylum.",
       "poster": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3Jyb3IlMjBzcGlyaXR1YWx8ZW58MXx8fHwxNzYxNzY3OTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 110,
-      "rating": 7.6
+      "rating": 7.6,
+      "reviews": [
+        {
+          "username": "HorrorFanatic",
+          "review": "Genuinely scary! Had me jumping in my seat.",
+          "rating": 8
+        },
+        {
+          "username": "NightOwl",
+          "review": "Good atmosphere but some clichéd scares.",
+          "rating": 7
+        }
+      ]
     },
     {
       "id": "10",
@@ -88,7 +204,8 @@
       "description": "A hilarious journey of a stand-up comedian trying to make it big.",
       "poster": "https://images.unsplash.com/photo-1515165562835-cf7d6f0d4f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21lZHklMjBzaG93YmV8ZW58MXx8fHwxNzYxNzUzNDA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 100,
-      "rating": 7.9
+      "rating": 7.9,
+      "reviews": []
     },
     {
       "id": "11",
@@ -97,7 +214,24 @@
       "description": "An emotional rollercoaster exploring the complexities of human relationships.",
       "poster": "https://images.unsplash.com/photo-1500534623283-312aade485b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmFtYSUyMGNpbmVtYXxlbnwxfHx8fDE3NjE3MTMyNjlfMA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 135,
-      "rating": 8.8
+      "rating": 8.8,
+      "reviews": [
+        {
+          "username": "SensitiveViewer",
+          "review": "Deeply moving and beautifully crafted. A must-watch.",
+          "rating": 9
+        },
+        {
+          "username": "ThoughtfulCritic",
+          "review": "Explores relationships in a profound way. Exceptional performances.",
+          "rating": 9
+        },
+        {
+          "username": "ArtHouseFan",
+          "review": "Complex and layered storytelling. One of the best dramas this year.",
+          "rating": 10
+        }
+      ]
     },
     {
       "id": "12",
@@ -106,7 +240,29 @@
       "description": "A heartwarming tale of two souls finding love in unexpected places.",
       "poster": "https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGxvdmV8ZW58MXx8fHwxNzYxNzI4MTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 115,
-      "rating": 8.1
+      "rating": 8.1,
+      "reviews": [
+        {
+          "username": "Hopeless_Romantic",
+          "review": "Sweet and heartwarming. Made me believe in love again!",
+          "rating": 8
+        },
+        {
+          "username": "DateNightPro",
+          "review": "Perfect date night movie. Charming and delightful.",
+          "rating": 8
+        },
+        {
+          "username": "RomComLover",
+          "review": "Predictable but enjoyable. The leads have great chemistry.",
+          "rating": 7
+        },
+        {
+          "username": "LoveStoryFan",
+          "review": "A feel-good romance that hits all the right notes.",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "13",
@@ -115,7 +271,8 @@
       "description": "Street fighters unite to take down a powerful crime syndicate.",
       "poster": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBzdHJlZXQlMjBmaWdodGVyfGVufDF8fHx8fDE3NjE3MzI1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 140,
-      "rating": 8.3
+      "rating": 8.3,
+      "reviews": []
     },
     {
       "id": "14",
@@ -124,7 +281,19 @@
       "description": "A scientist discovers a wormhole that leads to a parallel universe.",
       "poster": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXJhbGxlbCUyMHVuaXZlcnNlfGVufDF8fHx8MTc2MTc1Nzk3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 150,
-      "rating": 9.2
+      "rating": 9.2,
+      "reviews": [
+        {
+          "username": "PhysicsNerd",
+          "review": "Scientifically intriguing and visually spectacular!",
+          "rating": 10
+        },
+        {
+          "username": "ParallelWorldFan",
+          "review": "Mind-bending and thought-provoking. A sci-fi masterpiece.",
+          "rating": 9
+        }
+      ]
     },
     {
       "id": "15",
@@ -133,7 +302,14 @@
       "description": "A detective unravels the mystery behind a series of chilling murders.",
       "poster": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsbGluZyUyMG11cnJlcnxlbnwxfHx8fDE3NjE3Njc5NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 105,
-      "rating": 7.4
+      "rating": 7.4,
+      "reviews": [
+        {
+          "username": "MysteryLover",
+          "review": "Suspenseful thriller with a great twist ending.",
+          "rating": 7
+        }
+      ]
     },
     {
       "id": "16",
@@ -142,7 +318,24 @@
       "description": "A group of friends navigates the ups and downs of life with humor and heart.",
       "poster": "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cHNsYW5kaW5nJTIwZnJpZW5kc3xlbnwxfHx8fDE3NjE3NTM0MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 98,
-      "rating": 7.7
+      "rating": 7.7,
+      "reviews": [
+        {
+          "username": "ComedyGuru",
+          "review": "Lighthearted and fun. Great for a relaxing evening.",
+          "rating": 8
+        },
+        {
+          "username": "LaughTrack",
+          "review": "Good humor but nothing groundbreaking.",
+          "rating": 7
+        },
+        {
+          "username": "FriendshipGoals",
+          "review": "Heartwarming story about friendship with plenty of laughs.",
+          "rating": 8
+        }
+      ]
     },
     {
       "id": "17",
@@ -151,7 +344,8 @@
       "description": "A captivating love story set against the backdrop of a coastal town.",
       "poster": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMGxvdmV8ZW58MXx8fHwxNzYxNzI4MTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "duration": 118,
-      "rating": 8.2
+      "rating": 8.2,
+      "reviews": []
     }
   ],
   "categories": [
