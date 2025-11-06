@@ -1,24 +1,13 @@
-import { Stack } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 
 export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: "#f4511e",
-        },
-        headerTintColor: "#fff",
-        headerTitleStyle: {
-          fontWeight: "bold",
-        },
-      }}
-    >
-      <Stack.Screen
-        name="index"
-        options={{
-          title: "Cinema Billboard",
-        }}
+    <Tabs screenOptions={{ headerShown: false }}>
+      <Tabs.Screen name="index" options={{ title: "All Movies" }} />
+      <Tabs.Screen
+        name="ByCategory"
+        options={{ title: "Movies By Categories" }}
       />
-    </Stack>
+    </Tabs>
   );
 }
