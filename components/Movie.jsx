@@ -1,28 +1,33 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import SegmentControl from "./SegmentControl";
+import { getRatingStars, formatDuration } from "../utils/formatters";
 
-const Movie = ({ title, poster, description }) => {
+const Movie = ({ title, poster, description, rating, duration }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       <Image source={{ uri: poster }} style={styles.poster} />
+      <Text>{getRatingStars(rating)}</Text>
+      <Text>{formatDuration(duration)}</Text>
       <Text style={styles.description}>{description}</Text>
     </View>
-  )
-}
+  );
+};
 
-export default Movie
+export default Movie;
 
 const styles = StyleSheet.create({
   container: {
     marginBottom: 20,
     padding: 10,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 8,
     elevation: 2,
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   poster: {
     height: 200,
@@ -31,6 +36,6 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 14,
-    color: '#555',
+    color: "#555",
   },
-})
+});

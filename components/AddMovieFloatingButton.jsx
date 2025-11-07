@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
 const AddMovieFloatingButton = ({ onPress, style }) => {
   return (
@@ -8,23 +8,23 @@ const AddMovieFloatingButton = ({ onPress, style }) => {
         +
       </Text>
     </View>
-  )
-}
+  );
+};
 
-export default AddMovieFloatingButton
+export default AddMovieFloatingButton;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
+    backgroundColor: "blue",
     borderRadius: 50,
     elevation: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     width: 60,
     height: 60,
   },
   buttonText: {
-    color: 'white',
+    color: "white",
     fontSize: 24,
   },
-})
+});

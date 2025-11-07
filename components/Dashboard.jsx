@@ -1,28 +1,28 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, StyleSheet, View, Text, FlatList } from "react-native";
 import Movie from "../components/Movie";
-import data from "../data/data.json";
 import AddMovieFloatingButton from "../components/AddMovieFloatingButton";
 import SegmentControl from "../components/SegmentControl";
 import AddMovieModal from "../components/AddMovieModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useData } from "../context/DataContext";
 
 export default function Dashboard() {
-  const firstMovie = data.movies[0];
+  const { movies, categories, loading, fetchData } = useData();
   const [modalVisible, setModalVisible] = useState(false);
+
+  if (loading) {
+    return (
+      <SafeAreaView>
+        <Text>Cargando...</Text>
+      </SafeAreaView>
+    );
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <SegmentControl
-        segments={["All Movies", "Movies By Category"]}
-        selectedSegment={0}
-        onSegmentSelect={(index) => console.log(index)}
-        style={{ width: Dimensions.get("window").width - 20 }}
-      />
-      <Movie
-        title={firstMovie.title}
-        poster={firstMovie.poster}
-        description={firstMovie.description}
-      />
+    <SafeAreaView edges={["top"]} style={{ flex: 1, backgroundColor: "white" }}>
+      <FlatList data={movies} renderItem={({ item }) => <Movie {...item} />} />
+
       <AddMovieFloatingButton
         style={{
           position: "absolute",
@@ -31,7 +31,6 @@ export default function Dashboard() {
         }}
         onPress={() => {
           console.log("Add Movie Pressed");
-
           setModalVisible(true);
         }}
       />
@@ -39,9 +38,16 @@ export default function Dashboard() {
       <AddMovieModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
-        onSubmit={() => {
-          // Handle form submission
-          console.log("Movie submitted");
+        onSubmit={async (newMovie) => {
+          await fetch(
+            "https://unventable-sandfly-maurice.ngrok-free.dev/movies",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(newMovie),
+            }
+          );
+          await fetchData();
         }}
       />
     </SafeAreaView>
@@ -53,5 +59,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
+  },
+  title: {
+    marginLeft: 10,
+    fontSize: 24,
+    fontWeight: "bold",
+    textDecorationLine: "underline",
   },
 });

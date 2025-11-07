@@ -8,7 +8,11 @@ const useFetch = (url) => {
   const fetchData = useCallback(async () => {
     if (url) {
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

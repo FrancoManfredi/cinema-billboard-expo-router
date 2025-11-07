@@ -1,13 +1,12 @@
-import { Stack, Tabs } from "expo-router";
+import { Stack } from "expo-router";
+import DataProvider from "../context/DataContext";
 
 export default function RootLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
-      <Tabs.Screen name="index" options={{ title: "All Movies" }} />
-      <Tabs.Screen
-        name="ByCategory"
-        options={{ title: "Movies By Categories" }}
-      />
-    </Tabs>
+    <DataProvider>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      </Stack>
+    </DataProvider>
   );
 }
