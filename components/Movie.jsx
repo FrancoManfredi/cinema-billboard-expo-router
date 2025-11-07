@@ -1,17 +1,23 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import SegmentControl from "./SegmentControl";
 import { getRatingStars, formatDuration } from "../utils/formatters";
+import { useRouter } from "expo-router";
 
 const Movie = ({ title, poster, description, rating, duration }) => {
+  const router = useRouter();
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      onPress={() => router.push(`movie/${title}`)}
+      style={styles.container}
+    >
       <Text style={styles.title}>{title}</Text>
       <Image source={{ uri: poster }} style={styles.poster} />
       <Text>{getRatingStars(rating)}</Text>
       <Text>{formatDuration(duration)}</Text>
       <Text style={styles.description}>{description}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

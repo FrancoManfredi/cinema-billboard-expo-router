@@ -6,6 +6,10 @@ export default function RootLayout() {
     <DataProvider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="movie/[name]"
+          options={{ title: "Prueba", headerShown: true }}
+        />
       </Stack>
     </DataProvider>
   );

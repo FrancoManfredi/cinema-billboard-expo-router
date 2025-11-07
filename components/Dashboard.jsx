@@ -40,7 +40,7 @@ export default function Dashboard() {
         onClose={() => setModalVisible(false)}
         onSubmit={async (newMovie) => {
           await fetch(
-            "https://unventable-sandfly-maurice.ngrok-free.dev/movies",
+            "https://kaden-propanedioic-spleenfully.ngrok-free.dev/movies",
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
