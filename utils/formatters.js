@@ -5,7 +5,7 @@
  */
 export const getRatingStars = (rating) => {
   let stars = 0;
-  
+
   if (rating >= 0 && rating < 2) {
     stars = 1;
   } else if (rating >= 2 && rating < 4) {
@@ -17,10 +17,11 @@ export const getRatingStars = (rating) => {
   } else if (rating >= 8 && rating <= 10) {
     stars = 5;
   }
-  
-  return '⭐'.repeat(stars);
+
+  return "⭐".repeat(stars);
 };
-
 export const formatDuration = (minutes) => {
-
+  const horas = Math.floor(minutes / 60);
+  const minutos = minutes % 60;
+  return `${horas}h ${minutos}m`;
 };
