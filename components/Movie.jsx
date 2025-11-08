@@ -4,12 +4,12 @@ import SegmentControl from "./SegmentControl";
 import { getRatingStars, formatDuration } from "../utils/formatters";
 import { useRouter } from "expo-router";
 
-const Movie = ({ title, poster, description, rating, duration }) => {
+const Movie = ({ id, title, poster, description, rating, duration }) => {
   const router = useRouter();
 
   return (
     <TouchableOpacity
-      onPress={() => router.push(`movie/${title}`)}
+      onPress={() => router.push(`movie/${id}`)}
       style={styles.container}
     >
       <Text style={styles.title}>{title}</Text>
