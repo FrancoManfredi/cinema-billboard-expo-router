@@ -10,7 +10,7 @@ const Review = ({ username, review, rating }) => {
         borderRadius: 10,
         elevation: 2,
         margin: 10,
-        width: Dimensions.get("window").width - 20,
+        width: Dimensions.get("window").width - 60,
       }}
     >
       <View
