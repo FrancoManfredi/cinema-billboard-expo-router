@@ -9,7 +9,7 @@ export default function Movie() {
   const params = useLocalSearchParams();
   const [movie, setMovie] = useState({});
   const { data, loading, error } = useFetch(
-    `https://kaden-propanedioic-spleenfully.ngrok-free.dev/movies/${params.id}`
+    `https://unventable-sandfly-maurice.ngrok-free.dev/movies/${params.id}`
   );
 
   useEffect(() => {
@@ -26,7 +26,9 @@ export default function Movie() {
 
   return (
     <View>
-      <Stack.Screen options={{ title: movie.title }} />
+      <Stack.Screen
+        options={{ title: movie.title, headerBackTitle: "Volver" }}
+      />
       <MovieDetails {...movie} />
     </View>
   );

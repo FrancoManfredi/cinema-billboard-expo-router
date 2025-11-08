@@ -3,7 +3,7 @@ import { useState } from "react";
 import CategoriesDropDown from "./CategoriesDropDown";
 import { useData } from "../context/DataContext";
 
-export default function AddMovieModal({ visible, onClose, onSubmit }) {
+export default function AddMovieModal({ onClose, onSubmit }) {
   const { categories = [] } = useData(); // <- Garantizamos array
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [title, setTitle] = useState("");
@@ -21,106 +21,90 @@ export default function AddMovieModal({ visible, onClose, onSubmit }) {
   }
 
   return (
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={visible}
-      onRequestClose={onClose}
-    >
-      <View style={styles.overlay}>
-        <View style={styles.modalContent}>
-          <Text style={styles.title}>Add New Movie</Text>
+    <View style={styles.modalContent}>
+      <TextInput
+        placeholder="Title"
+        style={styles.input}
+        value={title}
+        onChangeText={setTitle}
+      />
 
-          <TextInput
-            placeholder="Title"
-            style={styles.input}
-            value={title}
-            onChangeText={setTitle}
-          />
+      <TextInput
+        placeholder="Description"
+        style={styles.input}
+        value={description}
+        onChangeText={setDescription}
+      />
 
-          <TextInput
-            placeholder="Description"
-            style={styles.input}
-            value={description}
-            onChangeText={setDescription}
-          />
+      <TextInput
+        placeholder="Duration"
+        style={styles.input}
+        value={duration}
+        onChangeText={setDuration}
+      />
 
-          <TextInput
-            placeholder="Duration"
-            style={styles.input}
-            value={duration}
-            onChangeText={setDuration}
-          />
+      <TextInput
+        placeholder="Rating"
+        style={styles.input}
+        value={rating}
+        onChangeText={setRating}
+      />
 
-          <TextInput
-            placeholder="Rating"
-            style={styles.input}
-            value={rating}
-            onChangeText={setRating}
-          />
+      <TextInput
+        placeholder="Poster URL"
+        style={styles.input}
+        value={poster}
+        onChangeText={setPoster}
+      />
 
-          <TextInput
-            placeholder="Poster URL"
-            style={styles.input}
-            value={poster}
-            onChangeText={setPoster}
-          />
+      <CategoriesDropDown
+        categories={categories} // <- ya es array seguro
+        onSelectCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
 
-          <CategoriesDropDown
-            categories={categories} // <- ya es array seguro
-            onSelectCategory={setSelectedCategory}
-            selectedCategory={selectedCategory}
-          />
+      {!!nameError && <Text style={styles.error}>{nameError}</Text>}
 
-          {!!nameError && <Text style={styles.error}>{nameError}</Text>}
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Submit"
+          style={styles.submitBtn}
+          onPress={() => {
+            if (
+              !title ||
+              !description ||
+              !poster ||
+              !rating ||
+              !duration ||
+              !selectedCategory
+            ) {
+              setNameError("Completa todos los campos para continuar.");
+              return;
+            }
 
-          <View style={styles.buttonContainer}>
-            <Button
-              title="Submit"
-              onPress={() => {
-                if (
-                  !title ||
-                  !description ||
-                  !poster ||
-                  !rating ||
-                  !duration ||
-                  !selectedCategory
-                ) {
-                  setNameError("Completa todos los campos para continuar.");
-                  return;
-                }
+            setNameError(null);
 
-                setNameError(null);
+            onSubmit?.({
+              title: capitalizeString(title),
+              description: capitalizeString(description),
+              poster,
+              rating: parseFloat(rating) || rating,
+              duration: parseInt(duration, 10) || duration,
+              category: selectedCategory,
+            });
 
-                onSubmit?.({
-                  title: capitalizeString(title),
-                  description: capitalizeString(description),
-                  poster,
-                  rating: parseFloat(rating) || rating,
-                  duration: parseInt(duration, 10) || duration,
-                  category: selectedCategory,
-                });
-
-                onClose();
-              }}
-            />
-            <Button title="Close" onPress={onClose} />
-          </View>
-        </View>
+            onClose();
+          }}
+        />
+        <Button title="Close" onPress={onClose} />
       </View>
-    </Modal>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   modalContent: {
-    width: "80%",
+    flex: 1,
     padding: 20,
     backgroundColor: "white",
     borderRadius: 10,
@@ -140,6 +124,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginTop: 20,
+  },
+  submitBtn: {
+    backgroundColor: "blue",
   },
   error: {
     color: "red",

@@ -6,10 +6,11 @@ import AddMovieModal from "../components/AddMovieModal";
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useData } from "../context/DataContext";
+import { useRouter } from "expo-router";
 
 export default function Dashboard() {
   const { movies, categories, loading, fetchData } = useData();
-  const [modalVisible, setModalVisible] = useState(false);
+  const router = useRouter();
 
   if (loading) {
     return (
@@ -30,24 +31,7 @@ export default function Dashboard() {
           right: 20,
         }}
         onPress={() => {
-          console.log("Add Movie Pressed");
-          setModalVisible(true);
-        }}
-      />
-
-      <AddMovieModal
-        visible={modalVisible}
-        onClose={() => setModalVisible(false)}
-        onSubmit={async (newMovie) => {
-          await fetch(
-            "https://kaden-propanedioic-spleenfully.ngrok-free.dev/movies",
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(newMovie),
-            }
-          );
-          await fetchData();
+          router.push("Modal");
         }}
       />
     </SafeAreaView>
