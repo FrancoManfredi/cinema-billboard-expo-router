@@ -6,10 +6,12 @@ import AddMovieModal from "../components/AddMovieModal";
 import { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useData } from "../context/DataContext";
+import { useFaves } from "../context/FavesContext";
 import { useRouter } from "expo-router";
 
 export default function Dashboard() {
   const { movies, categories, loading, fetchData } = useData();
+  const { faves, toggleFave } = useFaves();
   const router = useRouter();
 
   if (loading) {
@@ -22,7 +24,16 @@ export default function Dashboard() {
 
   return (
     <SafeAreaView edges={["top"]} style={{ flex: 1, backgroundColor: "white" }}>
-      <FlatList data={movies} renderItem={({ item }) => <Movie {...item} />} />
+      <FlatList
+        data={movies}
+        renderItem={({ item }) => (
+          <Movie
+            {...item}
+            isFavorite={faves.some((id) => id === item.id)}
+            handleFave={() => toggleFave(item.id)}
+          />
+        )}
+      />
 
       <AddMovieFloatingButton
         style={{

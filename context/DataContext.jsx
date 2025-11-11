@@ -9,10 +9,10 @@ export default function DataProvider({ children }) {
     loading,
     error,
     fetchData,
-  } = useFetch("https://unventable-sandfly-maurice.ngrok-free.dev/movies");
+  } = useFetch("https://kaden-propanedioic-spleenfully.ngrok-free.dev/movies");
 
   const { data: dataCategories } = useFetch(
-    "https://unventable-sandfly-maurice.ngrok-free.dev/categories"
+    "https://kaden-propanedioic-spleenfully.ngrok-free.dev/categories"
   );
 
   const [movies, setMovies] = useState([]);

@@ -27,6 +27,15 @@ export default function RootLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="FavoriteMovies"
+        options={{
+          title: "Favorites",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="heart" size={size} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }

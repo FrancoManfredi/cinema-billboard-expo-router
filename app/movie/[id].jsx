@@ -9,7 +9,7 @@ export default function Movie() {
   const params = useLocalSearchParams();
   const [movie, setMovie] = useState({});
   const { data, loading, error } = useFetch(
-    `https://unventable-sandfly-maurice.ngrok-free.dev/movies/${params.id}`
+    `https://kaden-propanedioic-spleenfully.ngrok-free.dev/movies/${params.id}`
   );
 
   useEffect(() => {

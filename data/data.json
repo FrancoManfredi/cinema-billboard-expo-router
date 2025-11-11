@@ -346,6 +346,15 @@
       "duration": 118,
       "rating": 8.2,
       "reviews": []
+    },
+    {
+      "id": "0aae",
+      "title": "Spongebob The Movie",
+      "description": "In The 2004 Movie The Spongebob Squarepants Movie, Plankton Frames Mr. Krabs For Stealing King Neptune's Crown, Forcing Spongebob And Patrick To Travel To Shell City To Retrieve It Within Six Days To Save Mr. Krabs And Bikini Bottom. Along The Way, They Face Many Perils, Mature Into Heroes, And Ultimately Defeat Plankton And His Plan. ",
+      "poster": "https://thumbnails.cbsig.net/CBS_Production_Entertainment_VMS/2021/04/08/1882809923956/SSTM_US_2004_SA_16x9_1920x1080_NB_2726947_1920x1080.jpg",
+      "rating": 10,
+      "duration": 87,
+      "category": "Comedy"
     }
   ],
   "categories": [
