@@ -3,14 +3,15 @@ import { useFaves } from "../../context/FavesContext";
 import { useData } from "../../context/DataContext";
 import Movie from "../../components/Movie";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useEffect } from "react";
 
 const FavoriteMovies = () => {
   const { faves, toggleFave } = useFaves();
   const { movies, loading } = useData();
 
   const favoriteMovies = movies.filter((movie) =>
-    faves.some((id) => id === movie.id)
-  );
+      faves.some((id) => id === movie.id)
+    );
 
   if (loading) {
     return (
